@@ -6,7 +6,8 @@ from time import sleep
 
 PATH = "C:\\Program Files (x86)\\chromedriver.exe"
 with webdriver.Chrome(PATH) as driver:
-    driver.get("https://lubimyczytac.pl/profil/1924129/kaka10052/biblioteczka/lista?shelfs=6745969")
+    link = "https://lubimyczytac.pl/profil/1924129/kaka10052/biblioteczka/lista?shelfs=6745969"
+    driver.get(link)
     with open("List_of_books.txt", "w") as file:
         try:
             actions = ActionChains(driver)
